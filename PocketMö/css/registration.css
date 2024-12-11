@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #123498 0%, #061651 40%, #00072C 100%);
+}
+
+.container {
+    display: flex;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+}
+
+.left {
+    background: linear-gradient(180deg, #123498 0%, #061651 40%, #00072C 100%);
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.left::before, .left::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.left::before {
+    position: absolute;
+    background: radial-gradient(109.42% 109.42% at 90.61% 74.86%, #73B5E6 12.6%, #2A649F 46.1%, #063163 72.6%);
+    width: 350px; /* Increased size */
+    height: 350px; /* Increased size */
+    top: 30px; /* Adjusted positioning */
+    left: -60px; /* Adjusted positioning */
+}
+
+.left::after {
+    position: absolute;
+    background: radial-gradient(146.85% 146.85% at 80.79% -22.63%, #73B5E6 0%, #2A649F 43%, #063163 74.67%);
+    width: 350px; /* Increased size */
+    height: 350px; /* Increased size */
+    bottom: -60px; /* Adjusted positioning */
+    right: 200px; /* Adjusted positioning */
+}
+
+.middle {
+    position: relative; /* Position relative for the circle inside */
+    height: 100%; /* Full height */
+    background-color: transparent; /* Background can be transparent or any color */
+}
+
+.middle::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(78.63% 78.97% at 30.04% 22.34%, #73B5E6 0%, #2A649F 53.46%, #063163 100%);
+    width: 521px;
+    height: 517px;
+    flex-shrink: 0;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-66%, -50%); /* Adjust for centering */
+}
+
+.right {
+    background-color: #ffffff; /* White background */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px; /* Increased padding */
+    border-top-left-radius: 40px; 
+    border-bottom-left-radius: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+    overflow: hidden; /* Prevents content overflow */
+}
+
+.logo {
+    margin-top: 70px;
+    text-align: center; /* Center the logo within the container */
+}
+
+.logo img {
+    width: 230px; /* Desired size */
+    padding-bottom: 0px;
+    height: 230px;
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: 30px; /* Adjusted margin for more space below */
+    font-size: 42px; /* Increased font size */
+    color: #0a2540;
+    font-weight: bold; /* Added bold weight for emphasis */
+}
+
+.login-form {
+    width: 80%; /* Set a specific width for the form */
+    max-width: 500px; /* Optional: Limit the maximum width */ /* Add padding for more space inside the form */
+    border-radius: 10px; /* Optional: Rounded corners */
+    margin: 0 auto; /* Center the form on the page */
+}
+
+input {
+    width: 441px;
+    height: 31px;
+}
+.input-group {
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+}
+
+.form-group {
+    width: 90%;
+    margin-bottom: 20px; /* Increased margin */
+    position: relative; /* Position relative to allow absolute positioning of icons */
+}
+
+.form-group input {
+    width: 100%; /* Full width of the form */
+    padding: 17px 17px 17px 40px; /* Increased padding on the left for the icon */
+    border: 2px solid #00072C;
+    border-radius: 5px;
+    font-size: 18px; /* Increased font size */
+}
+
+.form-group i {
+    position: absolute; /* Position the icon absolutely */
+    left: 15px; /* Position the icon on the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for centering */
+    color: #0a2540;
+    font-size: 18px; /* Increased icon size */
+}
+
+.btn {
+    width: 70%; /* Full width */
+    padding: 10px; /* Increased padding for height */
+    background: linear-gradient(to left, #123498 0%, #061651 40%, #00072C 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; /* Increased font size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    border-radius: 100px;
+    margin: 0 auto; /* Center horizontally */
+    display: block;
+    margin-top: 40px;
+}
+
+.btn:hover {
+    background-color: #082135; /* Darker shade on hover */
+}
+
+.signup {
+    text-align: center;
+    margin-top: 30px; /* Increased margin */
+    font-size: 16px; /* Increased font size */
+    color: #0a2540;
+    font-weight: bold;
+    padding-bottom: 70px;
+}
+
+.signup a {
+    color: #0a2540;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red; /* Style for error messages */
+    margin-bottom: 14px; /* Spacing below error messages */
+    font-size: 14px; /* Font size for error messages */
+    text-align: center;
+}

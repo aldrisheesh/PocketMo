@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; 
+}
+
+.modal {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px; /* Increased width */
+    max-width: 100%; /* Ensure it doesn't exceed the viewport */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 30px; /* Increased padding */
+    overflow: hidden; /* Prevent overflow */
+    z-index: 1000;
+}
+
+.header {
+    margin-top: 10px; /* Increased margin */
+    text-align: center;
+    font-size: 28px; /* Increased font size */
+    font-weight: bold;
+    color: #650110;
+    margin-bottom: 25px; /* Increased margin */
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of tabs */
+    justify-content: space-between;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 25px; /* Increased margin */
+    
+}
+
+.tab {
+    padding: 15px 20px; /* Increased padding */
+    cursor: pointer;
+    font-weight: bold;
+    color: #650110;
+    flex: 1 1 auto; /* Allow tabs to grow and shrink */
+    text-align: center; /* Center text in tabs */
+    min-width: 100px; /* Increased minimum width for tabs */
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: background-color 0.1s;
+}
+
+.tab.active {
+    background-color: #650110;
+    color: #FFF4D4;
+}
+.expenses-container {
+    max-height: 300px; /* Set max height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Optional: Add some padding */
+    margin-bottom: 20px; /* Space below the container */
+    border-radius: 20px 0 0 20px; /* Apply border radius only to the left side */
+    border: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.expenses-container::-webkit-scrollbar {
+    width: 6px; /* Adjust the scrollbar width */
+}
+
+.expenses-container::-webkit-scrollbar-thumb {
+    background: #ccc; /* Change the scrollbar thumb color */
+    border-radius: 3px; /* Round the edges */
+}
+
+.expenses-container::-webkit-scrollbar-thumb:hover {
+    background: #999; /* Darker color on hover */
+}
+
+.expenses-container::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track */
+}
+
+.expense-item {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 15px; /* Increased padding */
+    border-radius: 10px;
+    margin-bottom: 15px; /* Increased margin */
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center; /* Center the circle horizontally */
+    align-items: center; /* Center the circle vertically */
+}
+
+.circle {
+    width: 50px; /* Circle diameter */
+    height: 50px; /* Circle diameter */
+    background-color: #88190B; /* Circle color */
+    border-radius: 50%; /* Make it circular */
+    display: flex;
+    justify-content: center; /* Center icon horizontally */
+    align-items: center; /* Center icon vertically */
+}
+
+.expense-item i {
+    font-size: 20px; /* Increased icon size */
+    color: #FFF4D4; /* Change icon color for contrast */
+}
+
+.expense-details {
+    flex-grow: 1;
+    margin-left: 25px; /* Increased margin */
+}
+
+.expense-details .title {
+    font-weight: bold;
+    color: #762D2D;
+    font-size: 18px; /* Increased font size */
+}
+
+.expense-details .cost {
+    color: #762D2D;
+    font-size: 16px; /* Increased font size */
+}
+
+.expense-note {
+    font-style: italic;
+    color: #999;
+}
+
+.modal .buttons {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 25px; /* Increased margin */
+}
+
+.modal .button {
+    padding: 10px 50px; /* Increased padding */
+    border: 2px solid #762D2D;
+    border-radius: 20px; /* Fully rounded corners */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px; /* Increased font size */
+    text-align: center;
+    margin-left: 15px; /* Increased margin */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.modal .button.exit {
+    background-color: white;
+    color: #762D2D;
+}
+
+.modal .button.exit:hover {
+    background-color: #f0f0f0;
+}
+
+.modal .button.add {
+    background-color: #650110;
+    color: white;
+}
+
+.modal .button.add:hover {
+    background-color: #762D2D;
+}

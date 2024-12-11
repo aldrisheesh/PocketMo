@@ -1,0 +1,158 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Set Poppins as the default font */
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; 
+}
+
+.modal {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 600px; /* Increased width */
+    max-width: 90%; /* Ensure it doesn't exceed the viewport */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 30px; /* Increased padding */
+    overflow: hidden; /* Prevent overflow */
+    z-index: 1000;
+}
+
+.back-button {
+    position: absolute;
+    top: 7.5%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust to center */
+    z-index: 1; /* Ensure the button is above the circle */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.back-button::before {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 55%;
+    width: 50px; /* Width of the circle */
+    height: 50px; /* Height of the circle */
+    background-color: #ccc; /* Light background color */
+    border-radius: 50%; /* Make it a circle */
+    transform: translate(-50%, -50%) scale(0); /* Center it and scale down to 0 */
+    transition: transform 0.3s; /* Smooth transition */
+    z-index: -1; /* Place behind the button */
+}
+
+.back-button:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Scale to full size on hover */
+}
+
+.back-button i {
+    font-size: 28px; /* Increased icon size */
+    color: #ccc; /* Default icon color */
+    position: relative; /* Position relative to allow stacking */
+    z-index: 1; /* Ensure icon is above the circle */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.back-button:hover i {
+    color: white; /* Change icon color to white on hover */
+}
+
+h1 {
+    color: #650110;
+    text-align: center;
+    font-family: "Konkhmer Sleokchher";
+    font-size: 28px; /* Increased font size */
+    font-weight: 400;
+    margin-bottom: 20px; /* Increased margin */
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%; /* Set width to 100% */
+    padding: 15px; /* Increased padding */
+    margin: 10px 0;
+    border: 1px solid #650110;
+    border-radius: 7px;
+    font-size: 18px; /* Increased font size */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px; /* Increased margin */
+    
+}
+
+.category-buttons button {
+    background-color: #88190B;
+    color: #FFF4D4;
+    border: none;
+    border-radius: 7px;
+    padding: 15px; /* Increased padding */
+    margin: 5px;
+    flex: 1 1 calc(50% - 10px);
+    font-size: 16px; /* Increased font size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s; /* Smooth transition for color only */
+    border: 2px solid #88190B;
+}
+
+.category-buttons button:hover {
+    cursor: pointer;
+}
+
+.category-buttons button.active {
+    background-color: transparent; /* Make background transparent */
+    border: 2px solid #650110; /* Add border */
+    color: #650110; /* Change font color to dark */
+    font-weight: bold;
+}
+
+.category-buttons button.active i {
+    color: #650110; /* Change icon color to dark */
+}
+
+.category-buttons button i {
+    margin-right: 10px; /* Increased margin to create more space between icon and text */
+    color: #FFF4D4; /* Change icon color to dark */
+}
+
+.add-expense-button {
+    cursor: pointer;
+    background-color: #650110;
+    color: #FFF4D4;
+    border: none;
+    border-radius: 40px;
+    padding: 15px; /* Increased padding */
+    margin-top: 20px;
+    width: 100%;
+    font-size: 18px; /* Increased font size */
+    font-weight: 600;
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+.add-expense-button:hover {
+    transform: scale(1.03); /* Slightly grow on hover */
+}
+
+.add-expense-button:active {
+    background-color: #88190B; /* Change color on click */
+}

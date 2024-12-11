@@ -1,0 +1,660 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+      "Source Han Sans CN", sans-serif;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    font-family: sans-serif;
+    background: linear-gradient(180deg, #123498 0%, #061651 40%, #00072C 100%);
+    overflow: hidden;
+}
+
+.main-container {
+    margin: 0px auto;
+    padding: 0px;
+    position: relative;
+    width: 1563px;
+    max-width: 1920px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.box {
+    position: absolute;
+    width: 1563px;
+    height: 1008px;
+    top: 36px; 
+    bottom: 36px;
+    flex-shrink: 0;
+    background-color: white;
+    border-radius: 23px;
+    overflow: hidden;
+}
+
+.home {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 59px;
+    left: 34px;
+    z-index: 70;
+    overflow: hidden;
+}
+
+.home-icon {
+    position: relative;
+    width: 34px;
+    height: 37.333px;
+    margin: 1.333px 0 0 3px;
+    background: url(../../assets/images/home-icon.png)no-repeat center;
+    background-size: 100% 100%;
+    z-index: 71;
+}
+
+
+.home-page-1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    height: 41px;
+    top: 59px;
+    left: 100px;
+    color: #042440;
+    font-family: Inter, var(--default-font-family);
+    font-size: 37px;
+    font-weight: 700;
+    line-height: 41px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 12;
+}
+
+.group-2 {
+    top: 65px;
+    left: 1448px;
+    position: absolute;
+    width: 80px;
+    height: 29px;
+    z-index: 13;
+}
+
+.notifications {
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    top: 0;
+    left: 0;
+    z-index: 14;
+    overflow: hidden;
+}
+
+.notif-icon {
+    position: relative;
+    width: 19.333px;
+    height: 24.167px;
+    margin: 2.417px 0 0 4.833px;
+    background: url(../../assets/images/notif-icon.png)no-repeat center;
+    background-size: 100% 100%;
+    z-index: 15;
+}
+
+.settings {
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    top: 0;
+    left: 49px;
+    z-index: 16;
+  }
+
+.setting-icon {
+        position: relative;
+        width: 24.288px;
+        height: 24.167px;
+        margin: 2.417px 0 0 4.833px;
+        background: url(../../assets/images/setting-icon.png)no-repeat center;
+        background-size: 100% 100%;
+        z-index: 15;
+}
+
+
+.main-sidebar {
+    width: 286px; /* Fixed width for the sidebar */
+    height: 100%; /* Full height of the container */
+}
+
+.main-sidebar img {
+    position: absolute;
+    border-radius: 50%;
+    width: 122px;
+    height: 124px;
+    top: 100px;
+    left: 95px;
+    display: block; /* Ensure the image is treated as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    border: 5px solid white; /* Add a solid black border with a width of 5px */
+}
+
+.group-d {
+    position: absolute;
+    width: 267px;
+    height: 63px;
+    top: 235px;
+    left: 29px;
+    z-index: 2;
+}
+.name-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 267px;
+    height: 42px;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    font-family: Inter, var(--default-font-family);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 21.784px;
+    text-align: center;
+    z-index: 4;
+    padding-top: 5px;
+}
+.email-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 217px;
+    height: 42px;
+    top: 21px;
+    left: 23px;
+    color: #ffffff;
+    font-family: Inter, var(--default-font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 15.733px;
+    text-align: center;
+    z-index: 3;
+    padding-top: 7px;
+}
+.rectangle-13 {
+    position: absolute;
+    width: 22px;
+    height: 32px;
+    top: 505px; /* Final position */
+    left: -14px;
+    background: #d3e4e7;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.sidebar {
+    position: absolute;
+    width: 202px;
+    height: 252px;
+    top: 363px;
+    left: 95px;
+    z-index: 5;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 202px; /* Use the maximum width for all links */
+    height: 42px;
+    margin: 28px 0 0 0; /* Margin applied to all except the first */
+    color: #ffffff;
+    font-family: Inter, var(--default-font-family);
+    font-size: 18px;
+    line-height: 21.784px;
+    text-align: left;
+    text-decoration: none;
+}
+
+.sidebar a:first-child {
+    margin: 0;
+}
+  
+.sidebar a.active {
+    font-weight: 700;
+}
+  
+.additional-links {
+    margin-left: 20px;
+}
+  
+.additional-links a {
+    display: block;
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 10px 0;
+    text-align: left;
+}
+  
+.additional-links a:first-child {
+    margin-top: 20px;
+ }
+  
+.additional-links a:last-child {
+    margin-bottom: 0;
+}
+
+.stat-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 115px;
+    height: 220px;
+    margin-bottom: 43px;
+}
+
+.card-header {
+    position: absolute; /* Use fixed to keep it at the top of the page */
+    top: 125px; /* Aligns it to the top */
+    left: 242.5px; /* Aligns it to the left */
+    z-index: 50; /* Ensure it appears above other content */
+}
+
+.card-header i {
+    font-size: 40px;
+    color: white;
+}
+
+.box-total-money-lent {
+    position: relative; /* Required for the pseudo-element */
+    background-color: white;
+    width: 470px;
+    height: 220px;
+    margin-left: 31px;
+    border: 2px solid #011C35; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* To prevent pseudo-element overflow */
+}
+
+.box-total-money-lent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 60px; 
+    background: linear-gradient(90deg, #011C35 27.22%, #03529B 100%);
+    z-index: 1; /* Ensure it's on top of the background but below content */
+}
+
+.repaid-n-outstanding-box {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    gap: 14.05px; /* Add spacing between inner boxes */
+}
+  
+.box-2 {
+    width: 470px;
+    height: 72px;
+    background-color: #FFF;
+    filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.box-for-bar {
+    flex: 1; /* Allow it to grow and fit naturally */
+    width: auto; /* Remove fixed width if unnecessary */
+    height: 222.23px;
+    background-color: white;
+    margin-right: 31px;
+    border: 2px solid #670110; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px; /* Add padding to create space inside the box */
+    box-sizing: border-box; /* Ensure padding is included in the total width/height */
+}
+
+.progress-bar {
+    width: 100%; /* Fill the available width */
+    background-color: #E4B39C;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.progress {
+    height: 30px;
+    background-color: #B93E03;
+    border-radius: 25px;
+    transition: width 0.5s ease;
+}
+
+.text-bar {
+    font-size: 20px;
+    color: #011C35;
+    font-weight: bold;
+}
+
+.box-total-money-lent, .repaid-n-outstanding-box, .box-for-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-title {
+    padding-top: 30px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #011C35;
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.mini-box-title {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 42px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+
+    color: #011C35;
+    text-align: center;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.total-amount {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: #011C35;
+    font-weight: bold;
+}
+
+.mini-box-total-amount {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+
+    color: #011C35;
+    text-align: center;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.table-bg {
+    position: absolute; 
+    top: 425px; 
+    left: 30px; 
+    width: calc(100% - 100px); 
+    max-width: 1474.814px; 
+    border-radius: 9px; 
+    border: 4px solid #B7DCFF;
+    background: #EEF6FD;
+    padding: 20px; 
+    z-index: 1; 
+    overflow: hidden; /* Ensure overflow is hidden */
+}
+
+
+.table-container {
+    border-radius: 9px; /* Ensure the container also has border-radius */
+    overflow: hidden; /* Ensure overflow is hidden */
+}
+
+table {
+    width: 100%; /* Ensures the table fills the container */
+    border-collapse: collapse;
+    border-radius: 11px; /* Apply border radius */
+}
+
+.table-scroll {
+    max-height: 432px; /* Set the maximum height for the scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal scrolling */
+    border: 1px solid #ddd; /* Optional: add a border around the scrollable area */
+    border-radius: 5px; /* Optional: add rounded corners */
+    position: sticky;
+
+}
+
+.table-scroll::-webkit-scrollbar {
+    width: 6px; /* Adjust the scrollbar width */
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+    background: #ccc; /* Change the scrollbar thumb color */
+    border-radius: 3px; /* Round the edges */
+}
+
+.table-scroll::-webkit-scrollbar-thumb:hover {
+    background: #999; /* Darker color on hover */
+}
+
+.table-scroll::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track */
+}
+
+h2 {
+    padding-top: 75px;
+    margin-left: 20px;
+    display: flex;
+    width: 287px;
+    height: 42px;
+    margin: 0;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #011C35;
+    text-align: center;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+    
+.table-header {
+    height: 54px;
+    flex-shrink: 0;
+    background: linear-gradient(90deg, #0A2471 21.72%, #BB3F03 95.67%);
+    color: #FFF0EA;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: normal;
+    position: sticky;
+    top: 0;
+    border-top-left-radius: 9px; /* Match the outer border radius */
+    border-top-right-radius: 9px; /* Match the outer border radius */
+    z-index: 10;
+}
+
+.table-header th:not(:last-child) {
+    border-right: 1px solid #d3d3d3; /* Soft gray color for the border */
+}
+
+tbody {
+    background-color: #F7F8F9;
+    margin-top: 10px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd; /* Optional: keeps the bottom border */
+    height: 54px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #eeeeee;
+}
+
+.table-header th {
+    padding: 10px;
+    border: none;
+}
+
+tbody td {
+    padding: 10px; /* General padding for all sides */
+    text-align: left; /* Align text to the left */
+    position: relative; /* Required for the pseudo-element */
+    border: none;
+}
+
+/* New styles for padding, font, and borders */
+table tbody td {
+    padding-left: 20px; /* Add left padding */
+    font-family: Inter, sans-serif; /* Set the font family */
+    font-size: 22px; /* Set the font size */
+    font-weight: 600; /* Set the font weight */
+    line-height: normal; /* Set the line height */
+    color: #011C35;
+}
+
+/* Add right border to each cell except the last one */
+tbody td:not(:last-child) {
+    border-right: 1px solid #d3d3d3; /* Soft gray color for the border */
+}
+
+/* Hover effect for rows */
+tbody tr:hover {
+    background-color: aliceblue;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns buttons to the right */
+    gap: 10px;
+    margin-top: 20px; /* Add some space above the buttons */
+    padding-right: 10px;
+}
+
+.button-container .btn {
+    display: flex;  /* Enables flexbox for the button */
+    align-items: center;  /* Vertically centers the icon and text */
+    padding: 5px 40px;
+    border-radius: 25px;
+
+    color: #f9f9f9;
+    text-align: center;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+    text-decoration: none !important; /* Remove underline from anchor */
+}
+
+.btn-icon {
+    width: 24px;
+    height: 22.629px;
+    flex-shrink: 0;
+    margin-right: 10px;  /* Adds space between the icon and the text */
+}
+
+.btn-rec {
+    border: 1px solid #8B1B0A;
+    background-color: #8B1B0A;
+}
+
+.btn-upd {
+    border: 1px solid #AB3B05;
+    background-color: #AB3B05;
+}
+
+.btn:hover {
+    background-color: brown;
+}
+
+.alert {
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    padding: 20px 25px; /* Increased padding for a larger box */
+    color: white;
+    border-radius: 8px; /* Slightly larger border radius for a softer look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    z-index: 1010;
+    transition: opacity 0.5s, transform 0.3s; /* Added transform for animation */
+    transform: translateY(-10px); /* Initial position for animation */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    font-family: 'Inter', var(--default-font-family); /* Apply the specified font family */
+    font-size: 22px; /* Set a base font size */
+}
+  
+.alert.show {
+transform: translateY(0); /* Move to original position when shown */
+}
+
+.alert.success {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32); /* Gradient background */
+}
+
+.alert.error {
+    background: linear-gradient(135deg, #B71C1C, #7F0000); /* Darker red gradient */
+}
+
+.alert .closebtn {
+margin-left: 15px;
+color: white;
+font-weight: bold;
+cursor: pointer;
+font-size: 20px; /* Increased font size for better visibility */
+transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.alert .closebtn:hover {
+color: #FFEB3B; /* Change color on hover for better interaction */
+}
+
+.alert.hide {
+opacity: 0;
+transform: translateY(-10px); /* Move up when hidden */
+transition: opacity 0.5s, transform 0.3s; /* Ensure smooth transition */
+}
+
+.simple-app-logo {
+position: absolute;
+width: 170px;
+height: 170px;
+top: 850px;
+left: 75px;
+background: url(../../assets/images/logo-1.png)
+no-repeat center;
+background-size: cover;
+z-index: 11;
+}
+
+  

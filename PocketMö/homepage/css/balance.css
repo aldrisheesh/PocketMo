@@ -1,0 +1,247 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+      "Source Han Sans CN", sans-serif;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999; 
+}
+
+
+.modal {
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 676px;
+  height: 484px;
+  z-index: 1000; 
+}
+
+/* Modal content */
+.modal-content {
+  position: fixed; /* Changed to relative */
+  width: 671px; /* Use full width of the modal */
+  height: 100%; /* Use full height of the modal */
+  background: #f9f9f9;
+  border-radius: 25px;
+  z-index: 1;
+}
+
+.modal .add-balance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 318px;
+  height: 74px;
+  margin: 13px 0 0 177px;
+  color: #061651;
+  font-family: Konkhmer Sleokchher, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 54.199px;
+  text-align: center;
+  z-index: 2;
+  top: 0px; 
+  left: 40px;
+}
+
+.modal .line {
+  position: relative;
+  width: 618px;
+  height: 1px;
+  margin: 8px 0 0 34px;
+  background: url(../../assets/images/31aa5621-b85e-47a4-a050-8d69a8fc835a.png) no-repeat center;
+  background-size: cover;
+  z-index: 25;
+  top: 0px; 
+  left: -7.5px;
+}
+
+.modal .flex-row-aa, .flex-row-e, .flex-row-fa, .flex-row-db, .flex-row-fae {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 567px;
+  margin: 14px 0 0 52px;
+  z-index: 15;
+}
+
+.modal .flex-row-e {
+  padding-top: 20px;
+}
+
+.modal .flex-row-fae {
+  padding-top: 20px;
+}
+
+.modal .balance-1, .duration-1 {
+  flex-shrink: 0; /* Prevents the items from shrinking */
+  position: relative; /* Allows for absolute positioning if needed */
+  height: 36px; /* Sets the height of the items */
+  color: #061651; /* Sets the text color */
+  font-family: Poppins, var(--default-font-family); /* Sets the font family */
+  font-size: 22px; /* Sets the font size */
+  font-weight: 600; /* Sets the font weight */
+  line-height: 36px; /* Sets the line height */
+  text-align: left; /* Aligns text to the left */
+  white-space: nowrap; /* Prevents text from wrapping */
+  z-index: 4; /* Sets the stacking order */
+}
+
+.modal .duration-1 {
+  right: 205px;
+}
+
+.modal .flex-row-aa {
+  height: 36px;
+  margin-top: 17px;
+}
+
+.modal .flex-row-aa-1 {
+  position: relative;
+  width: 584px;
+  height: 48px;
+  margin: 9px 0 0 52px;
+  z-index: 11;
+}
+
+.modal .rectangle-input {                                        
+    display: inline-block;
+    position: relative;
+    height: 48px;
+    border: 1px solid #052440; /* Border color */
+    z-index: 11;
+    overflow: hidden;
+    border-radius: 5px;
+}                                                     
+
+.modal .rectangle-input input {
+    width: 90%; /* Make the input take the full width of the container */
+    height: 100%; /* Make the input take the full height of the container */
+    border: none; /* Remove the default border */
+    outline: none; /* Remove the outline on focus */
+    padding-left: 10px; /* Add some padding for better spacing */
+    font-family: Poppins, var(--default-font-family); /* Use the same font family */
+    font-size: 16px; /* Set the font size */
+    color: #061651; /* Text color */
+}
+
+.modal .rectangle-input input::placeholder {
+    color: #b3b3b3; /* Placeholder color */
+    opacity: 1; /* Ensure full opacity for placeholder */
+}
+
+.modal .rectangle-input:first-child {
+  width: 250px;
+}
+
+.modal .rectangle-input:nth-child(2) {
+  width: 128px;
+  left: 10px;
+  border-color: rgba(6, 22, 81, 0.85);
+}
+
+.modal .rectangle-input:nth-child(3) {
+  width: 128px;
+  left: 47px;
+  border-color: #061651;
+}
+
+.modal .date {
+  width: 132px;
+  height: 36px;
+  top: 6px;
+  left: 276px;
+}
+
+.modal .to {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  width: 45px;
+  height: 36px;
+  top: 6px;
+  left: 404px;
+  font-family: Poppins, var(--default-font-family);
+  font-weight: 400;
+  color: #061651;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+}
+
+.modal .date-picker {
+  width: 132px;
+  height: 36px;
+  top: 6px;
+  left: 452px;
+}
+
+.modal .rectangle-button, .rectangle-button-clear, .rectangle-button-done {
+  flex-shrink: 0;
+  position: relative;
+  width: 276px;
+  height: 40px;
+  cursor: pointer;
+  background: #03529b;
+  border: none;
+  border-radius: 5px;
+  z-index: 13;
+  color: #f9f9f9;
+  font-family: Inter, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+.modal .rectangle-button-clear, .rectangle-button-done {
+  height: 38px;
+  border-radius: 40px;
+}
+
+.modal .rectangle-button-clear {
+  background: transparent;
+  border: 1px solid #000000;
+}
+
+.modal .rectangle-button-done {
+  background: #033c72;
+}
+
+
+.modal .span-clear, .span-done {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 130px;
+  height: 30px;
+  top: 3px;
+  left: 72px;
+  font-family: Inter, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.784px;
+  text-align: center;
+}
+
+.modal .span-clear {
+  color: #061651;
+}
+
+.modal .span-done {
+  color: #f9f9f9;
+}

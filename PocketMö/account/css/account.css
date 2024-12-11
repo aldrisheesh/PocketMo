@@ -1,0 +1,686 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+/* changes sa base: 
+  1. top and left margins under ng home class.
+    - home
+    - home-span-1 
+    - notifications
+    - settings
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  font-family: sans-serif;
+  background: linear-gradient(180deg, #123498 0%, #061651 40%, #00072C 100%);
+  overflow: hidden;
+}
+
+.main-container {
+  margin: 0px auto;
+  padding: 0px;
+  position: relative;
+  width: 1563px;
+  max-width: 1920px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.box {
+  position: absolute;
+  width: 1563px;
+  height: 1008px;
+  top: 36px; 
+  bottom: 36px;
+  flex-shrink: 0;
+  background-color: white;
+  border-radius: 23px;
+  overflow: hidden;
+}
+
+.head-divider {
+  width: 1492.001px;
+  height: 6px;  
+  background: linear-gradient(90deg, #0A2471 0%, #BB3F03 100%);
+  margin-top: 90px;
+  margin-left: 34px;
+  margin-right: 37px;
+}
+
+.home {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 59px;
+  left: 34px;
+  z-index: 70;
+  overflow: hidden;
+}
+
+.home-icon {
+  position: relative;
+  width: 34px;
+  height: 37.333px;
+  margin: 1.333px 0 0 3px;
+  background: url(../../assets/images/home-icon.png)no-repeat center;
+  background-size: 100% 100%;
+  z-index: 71;
+}
+
+
+.home-page-1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  height: 41px;
+  top: 59px;
+  left: 100px;
+  color: #042440;
+  font-family: Inter, var(--default-font-family);
+  font-size: 37px;
+  font-weight: 700;
+  line-height: 41px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 12;
+}
+
+.group-2 {
+  top: 65px;
+  left: 1448px;
+  position: absolute;
+  width: 80px;
+  height: 29px;
+  z-index: 13;
+}
+
+.notifications {
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  top: 5px;
+  left: 0;
+  z-index: 14;
+  overflow: hidden;
+}
+
+.notif-icon {
+  position: relative;
+  width: 19.333px;
+  height: 24.167px;
+  margin: 2.417px 0 0 4.833px;
+  background: url(../../assets/images/notif-icon.png)no-repeat center;
+  background-size: 100% 100%;
+  z-index: 15;
+}
+
+.settings {
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  top: 5px;
+  left: 49px;
+  z-index: 16;
+}
+
+.setting-icon {
+      position: relative;
+      width: 24.288px;
+      height: 24.167px;
+      margin: 2.417px 0 0 4.833px;
+      background: url(../../assets/images/setting-icon.png)no-repeat center;
+      background-size: 100% 100%;
+      z-index: 15;
+}
+
+
+.main-sidebar {
+  width: 286px; /* Fixed width for the sidebar */
+  height: 100%; /* Full height of the container */
+}
+
+.main-sidebar img {
+  position: absolute;
+  border-radius: 50%;
+  width: 122px;
+  height: 124px;
+  top: 100px;
+  left: 95px;
+  display: block; /* Ensure the image is treated as a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  border: 5px solid white; /* Add a solid black border with a width of 4px */
+}
+
+.group-d {
+  position: absolute;
+  width: 267px;
+  height: 63px;
+  top: 235px;
+  left: 29px;
+  z-index: 2;
+}
+.name-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 267px;
+  height: 42px;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 21.784px;
+  text-align: center;
+  z-index: 4;
+  padding-top: 5px;
+}
+.email-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 217px;
+  height: 42px;
+  top: 21px;
+  left: 23px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 15.733px;
+  text-align: center;
+  z-index: 3;
+  padding-top: 7px;
+}
+
+.sidebar {
+  position: absolute;
+  width: 202px;
+  height: 252px;
+  top: 363px;
+  left: 95px;
+  z-index: 5;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 202px; /* Use the maximum width for all links */
+  height: 42px;
+  margin: 28px 0 0 0; /* Margin applied to all except the first */
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 18px;
+  line-height: 21.784px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.sidebar a:first-child {
+  margin: 0; /* Remove margin for the first link */
+}
+
+.sidebar a.active {
+  font-weight: 700; /* Make the active link bold */
+}
+.additional-links {
+  margin-left: 20px; /* Adjust as needed for indentation */
+}
+
+.additional-links a {
+  display: block; /* Stack the additional links */
+  font-weight: 400; /* Normal weight for additional links */
+  color: #ffffff; /* Change color as needed */
+  text-decoration: none; /* Remove underline */
+  margin: 10px 0; /* Space between additional links */
+}
+
+.additional-links a:first-child {
+  margin-top: 20px; /* Adjust this value as needed for spacing */
+}
+.additional-links a:last-child {
+  margin-bottom: 0; /* Remove bottom margin */
+}
+.rectangle-13 {
+  position: absolute;
+  width: 22px;
+  height: 32px;
+  top: 435px;
+  left: -14px;
+  background: #d3e4e7;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.simple-app-logo {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  top: 850px;
+  left: 75px;
+  background: url(../../assets/images/logo-1.png)
+  no-repeat center;
+  background-size: cover;
+  z-index: 11;
+}
+
+.account-container {
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.left-section, .right-section {
+  margin: 0;
+}
+
+.left-section {
+  padding: 20px 35px;
+  width: 50%;
+  height: 880px;
+}
+
+.set-pass-button {
+  background: none; 
+  border: none; 
+  padding: 0; 
+  margin-left: 360px;
+  cursor: pointer; 
+}
+
+.password-cell {
+  display: flex; /* Make the cell a flex container */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between items */
+  margin-right: 20px;
+  padding: 10px;
+  height: 52.93px;
+}
+
+.set-pass-icon {
+  width: 20px; /* Adjust icon size */
+  height: 20px; /* Adjust icon size */
+  transition: transform 0.2s ease; /* Smooth transition for the scaling effect */
+}
+
+.set-pass-icon:hover {
+  transform: scale(1.1); /* Enlarge the button slightly on hover */
+}
+
+.right-section {
+  padding: 20px 25px 20px 0;
+  width: 50%;
+}
+
+.profile-pic-container {
+  position: relative;
+  text-align: center;
+  margin-top: 17px;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  border: 6px solid #0A2471;
+  border-radius: 50%;
+  width: 283px;
+  height: 286px;
+  flex-shrink: 0;
+}
+
+.profile-pic img {
+  border-radius: 50%;
+  width: 283px;
+  height: 286px;
+  flex-shrink: 0;
+}
+
+.edit-pic-button {
+  bottom: 5px;
+  right: 40%;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  background-color: #FFF;
+  border: 4px solid #0A2471;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  transition: transform 0.2s ease; /* Smooth transition for the transform */
+  transform: translateX(50%); /* Initial translation */
+}
+
+.edit-pic-button:hover {
+    transform: translateX(50%) scale(1.1); /* Enlarge the button slightly on hover while maintaining position */
+}
+
+.subsec-personal-info {
+display: flex;
+justify-content: space-between;
+}
+
+.dropdown {
+  padding: 10px; /* Add padding for better spacing */
+  border: none; /* Remove border */
+  border-radius: 0; /* Remove rounded corners */
+  background-color: transparent; /* Remove background color */
+  font-size: 16px; /* Font size */
+  color: #333; /* Text color */
+  appearance: none; /* Remove default dropdown arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><polygon points="0,0 10,0 5,5" fill="%23333"/></svg>'); /* Custom dropdown arrow */
+  background-repeat: no-repeat; /* Prevent repeating the background image */
+  background-position: right 10px center; /* Position the arrow */
+  background-size: 15px; /* Size of the arrow */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: box-shadow 0.3s; /* Smooth transition for shadow only */
+  outline: none; /* Remove outline */
+}
+
+.dropdown:focus {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on focus */
+}
+
+.btn-upd {
+  display: flex;  /* Enables flexbox for the button */
+  align-items: center;  /* Vertically centers the icon and text */
+  padding: 5px 40px;
+  border: #00072C;
+  border-radius: 30px;
+  background: #0A2471;
+  color: #f9f9f9;
+  text-align: center;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.btn-upd img {
+  margin-right: 10px;
+}
+
+.btn-upd:hover {
+  background: #1A3E8E;  /* Lighter blue color on hover */
+}
+
+.table-bg {
+  width: 729px;
+  height: 419px;
+  flex-shrink: 0;
+  margin-top: 26px;
+  background-color: #EEF3FF;
+  border: 4px solid #B7C9FF;
+  border-radius: 10px;
+}
+
+.personal-info table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.personal-info table td {
+  padding: 8px 0;
+}
+
+/* table styling */
+tr {
+  height: 70px;
+}
+
+th {
+width: 500px;
+color: #000;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-align: left;
+padding-left: 20px;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+
+/* preference styling*/
+
+.preferences-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 704px;
+  height: 800px;
+  flex-shrink: 0;
+  margin-top: 18px;
+  background-color: #EEF3FF;
+  border: 4px solid #B7C9FF;
+  border-radius: 10px;
+}
+
+/* Each Row */
+.preference-row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr; /* Three columns: label, sub-label, control */
+  align-items: center;
+  gap: 10px;
+  height: 68px;
+  border-bottom: 1px solid #ddd;
+  padding-right: 10px;
+}
+
+/* Control Column (Third Column) */
+.preference-row > label, /* For switches */
+.preference-row > select, /* For dropdowns */
+.preference-row > button { /* For buttons (like Delete Account) */
+  justify-self: end; /* Aligns content to the right within its column */
+}
+
+/* Main Label (First Column) */
+.main-label {
+  width: 200px;
+  padding-left: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+}
+
+/* Sub Label (Second Column) */
+.sub-label {
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Switch (Third Column) */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+/* Dropdown Styles */
+.dropdown {
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 4px;
+  width: 200px;
+}
+
+/* DOWNLOAD BUTTON */
+.backup-button {
+  background: none; /* Remove default button background */
+  border: none; /* Remove default button border */
+  padding-right: 5px; /* Remove padding */
+  cursor: pointer; /* Show pointer on hover */
+  display: inline-block; /* Ensure proper dimensions */
+}
+
+/* Image Styling for Button */
+.backup-button img {
+  width: 32px; /* Set the image size (adjust as needed) */
+  height: 32px;
+  display: block; /* Ensure no extra spacing */
+  object-fit: contain; /* Ensure the image scales properly */
+}
+
+/* Optional: Add hover effects for button */
+.backup-button:hover img {
+  filter: brightness(0.9); /* Slightly darken image on hover */
+  transform: scale(1.1); /* Slight zoom-in effect */
+  transition: all 0.2s ease; /* Smooth transition */
+}
+
+
+/* Ensure button in the control column aligns right */
+.preference-row > .backup-button {
+  justify-self: end; /* Align to the right */
+}
+
+
+/* Delete Account Button */
+.delete-account {
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 230px;
+  height: 36px;
+  flex-shrink: 0;
+  background-color: #8B1B0A;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+
+  color: #F9F9F9;
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+.delete-account i{
+  margin-right: 10px;
+}
+
+.delete-account:hover {
+  background-color: #BB3F03;
+}
+
+.section-titles h2{
+  margin: 0;
+  color: #0A2471;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.alert {
+  position: fixed;
+  bottom: 40px;
+  right: 50px;
+  padding: 20px 25px; /* Increased padding for a larger box */
+  color: white;
+  border-radius: 8px; /* Slightly larger border radius for a softer look */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  z-index: 1010;
+  transition: opacity 0.5s, transform 0.3s; /* Added transform for animation */
+  transform: translateY(-10px); /* Initial position for animation */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  font-family: 'Inter', var(--default-font-family); /* Apply the specified font family */
+  font-size: 22px; /* Set a base font size */
+}
+
+.alert.show {
+transform: translateY(0); /* Move to original position when shown */
+}
+
+.alert.success {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32); /* Gradient background */
+}
+
+.alert.error {
+  background: linear-gradient(135deg, #B71C1C, #7F0000); /* Darker red gradient */
+}
+
+.alert .closebtn {
+margin-left: 15px;
+color: white;
+font-weight: bold;
+cursor: pointer;
+font-size: 20px; /* Increased font size for better visibility */
+transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.alert .closebtn:hover {
+color: #FFEB3B; /* Change color on hover for better interaction */
+}
+
+.alert.hide {
+opacity: 0;
+transform: translateY(-10px); /* Move up when hidden */
+transition: opacity 0.5s, transform 0.3s; /* Ensure smooth transition */
+}

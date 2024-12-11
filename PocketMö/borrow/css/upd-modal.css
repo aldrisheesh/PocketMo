@@ -1,0 +1,249 @@
+/* changes from the template: marami dejk 
+    - may container
+    - container size: fixed width and height 
+    - date fields and input fields may specific styling
+    - modal header: may specific styling din para wala na yung rectangle 
+*/
+
+body, h1, input, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.background-content {
+    display: flex; /* Center the content inside this div */
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Take full height of the body */
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; 
+}
+
+.container {
+    position: absolute;
+    background-color: white;
+    width: 660px;
+    height: 685px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 1000; 
+} 
+
+.modal-header {
+    text-align: center;
+    font-size: 28px;
+    height: 75px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    z-index: 2;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: linear-gradient(90deg, #0A2471 25.22%, #BB3F03 100%);
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Konkhmer Sleokchher', sans-serif;
+
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modal {
+    background-color: white;
+    border-radius: 25px;
+    width: 100%; 
+    max-width: 660px; 
+    padding: 50px;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box; 
+    z-index: 2; 
+    padding-top: 25px;
+}
+
+/* input styling */
+
+
+/* Styles for individual suggestion items */
+.suggestion-item {
+    position: absolute;
+    padding: 10px; /* Padding for better spacing */
+    font-size: 16px; /* Font size for suggestions */
+    color: #333; /* Text color */
+    background-color: white;
+    width: 536px;
+    text-align: left;
+    top: 191px;
+    border-top: none; /* No top border */
+    border-left: 2px solid #052440; /* Left border */
+    border-right: 2px solid #052440; /* Right border */
+    border-bottom: 2px solid #052440; /* Bottom border */
+    transition: border-bottom 0.3s ease; /* Smooth transition for the bottom border */
+    border-radius: 0 0 5px 5px;
+}
+
+/* Hover effect for suggestion items */
+.suggestion-item:hover {
+    background-color: #e9ecef; /* Light gray background on hover */
+}
+
+.input-group {
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    text-align: left;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #061651;
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+.input-group input {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #052440;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; 
+    flex-grow: 1; /* Allow input to take remaining space */
+}
+
+.transaction-form {
+    padding: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+
+.remaining-balance-group {
+    display: flex;
+    align-items: center; /* Align currency and input field vertically */
+    width: 100%; /* Ensure it takes full width */
+}
+
+.remaining-balance-group .currency {
+    padding: 8px 12px;
+    height: 24px;
+    font-size: 22px;
+    background: #0b69c8;
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.remaining-balance-group input {
+    border-top-left-radius: 0; 
+    border-bottom-left-radius: 0;
+    flex-grow: 1; /* Allow input to take remaining space */
+    width: 100%; /* Ensure it stretches */
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box; /* Prevent input overflow */
+}
+
+input[type="date"] {
+    font-family: 'Poppins', sans-serif; 
+    color: #0A2471;
+    width: 100%; 
+    margin-bottom: 0; 
+    padding: 6.1px;
+}
+
+.date-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+}
+
+.date-group .input-group {
+    width: 100%; 
+    margin-bottom: 0; 
+}
+
+
+/* keypad styling */
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%; 
+}
+
+.keypad button {
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 550;
+    border: 3px solid #03529B;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.keypad button.number {
+    background-color: #03529B;
+    color: white;
+}
+
+.keypad button.clear, .keypad button.done {
+    background-color: white;
+    color: #0A2471; 
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.keypad button.clear:hover, .keypad button.done:hover {
+    background-color: #f0f0f0; 
+}
+
+.keypad button.done:hover {
+    background-color: #f0f0f0; 
+}
+
+
+@media (max-width: 768px) {
+    .modal {
+        padding: 30px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+}
