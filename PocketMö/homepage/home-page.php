@@ -128,7 +128,7 @@ $balanceData = [];
 $expenseData = [];
 
 // Loop to get data for the months
-for ($i = -2; $i <= 2; $i++) { // From two months ago to three months ahead
+for ($i = -2; $i <= 2; $i++) { // From two months ago to two months ahead
     $month = ($currentMonth + $i - 1) % 12 + 1; // Adjust month for looping
     $year = $currentYear + floor(($currentMonth + $i - 1) / 12); // Adjust year if necessary
 
