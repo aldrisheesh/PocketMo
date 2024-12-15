@@ -92,7 +92,7 @@ $noExpensesMessage = empty($expenses) ? "No items to display." : "";
                 <div class="expense-item" data-category="<?php echo $expense['title']; ?>">
                     <div class="icon-container">
                         <div class="circle">
-                            <i class="<?php echo $expense['icon']; ?>"></i> <!-- Icon inside the circle -->
+                            <i class="<?php echo $expense['icon']; ?>"></i>
                         </div>
                     </div>
                     <div class="expense-details">
